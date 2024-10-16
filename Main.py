@@ -34,7 +34,7 @@ def main():
     while True:
         algoritmoEscolhido = input("Escolha o algoritmo você que executar: \n 1 - Heurística \n 2 - Programação Dinamica \n 0 - Sair \n Digite a opção: ")
         if algoritmoEscolhido in ["1", "2"]:
-            adaptar = input("Executar quais instancias: \n 1 - Grafos \n 2 - Grafos Cactos \n 3 - Voltar \n 0 = Sair \n Digite a opção: ")
+            adaptar = input("Executar quais instancias: \n 1 - Grafos \n 2 - Grafos Cactos \n 3 - Voltar \n 0 - Sair \n Digite a opção: ")
             if adaptar in ["1", "2"]:
                 processarInstancias(algoritmoEscolhido, adaptar)
                 break

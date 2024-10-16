@@ -1,8 +1,9 @@
-
 class Vertice:
     def __init__(self, nome, idCor):
         self.nome = nome
         self.idCor = idCor
+        self.idCores = []
+
 
 class Grafo:
     def __init__(self, nVertices, nCores, nArestas):
@@ -12,9 +13,16 @@ class Grafo:
         self.vertices = []  
         self.cores = []  
         self.idArestas = [[] for _ in range(nVertices)]  
+        self.rotulos = [(0, 0) for _ in range(nVertices)]
         self.calcBase = [[[] for _ in range(nVertices)] for _ in range(nVertices)]  
         self.calcAtual = [[[] for _ in range(nVertices)] for _ in range(nVertices)] 
         self.idHistorico = []  
+
+    def mostrarArestas(self):
+        for i in self.idArestas:
+            for j in i:
+                print(j, end=" ")
+        print("|")
 
 def criarGrafo(instancia):
     with open(instancia, 'r') as grafoFile:
