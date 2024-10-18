@@ -27,8 +27,7 @@ def processarInstancias(algoritmoEscolhido, adaptar):
             arquivoInstancia = f'Instancias/MTPP/{nomeGrafo}.txt' if adaptar == "1" else f'Instancias/Cacto/{nomeGrafo}.txt'
             grafo = criarGrafo(arquivoInstancia)
             resposta, tempoExecucao = executarAlgoritmo(grafo, algoritmoEscolhido, adaptar)
-            print(f"Resposta: {resposta} cores")
-            print(f'Tempo de execução: {tempoExecucao:.20f} segundos')
+            print(f"{resposta}-{tempoExecucao:.7f}")
 
 def main():
     while True:
